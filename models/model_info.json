@@ -1,0 +1,14 @@
+{
+  "train_accuracy": 0.9938,
+  "test_accuracy": 0.717,
+  "train_samples": 20000,
+  "test_samples": 1000,
+  "samples_per_class": 5000,
+  "feature_dim": 1493,
+  "class_names": [
+    "CNV",
+    "DME",
+    "DRUSEN",
+    "NORMAL"
+  ]
+}
