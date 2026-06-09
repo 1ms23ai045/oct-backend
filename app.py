@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+﻿from flask import Flask, request, jsonify
 from flask_cors import CORS
 import random
 import os
@@ -15,7 +15,7 @@ CLINICAL_EXPLANATIONS = {
 
 @app.route('/health', methods=['GET'])
 def health():
-    return jsonify({"status": "healthy", "models_loaded": True})
+    return jsonify({"status": "healthy"})
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -25,7 +25,7 @@ def predict():
     file = request.files['image']
     filename = file.filename.lower() if file.filename else ""
     
-    # Simple prediction based on filename for demo
+    # Simple prediction based on filename
     if "cnv" in filename:
         predicted_class = 'CNV'
         confidence = random.uniform(85, 95)
